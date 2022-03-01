@@ -20,9 +20,9 @@ for i in range(num):
 	y = int(y)
 	if ((x-x1)**2 + (y-y1)**2 <= r1**2 and (x-x2)**2+(y-y2)**2 <= r2**2):
 		inBoth = inBoth + 1
-	elif ((x-x1)**2 + (y-y1)**2):
+	elif ((x-x1)**2 + (y-y1)**2 <= r1**2):
 		in1 = in1 + 1
-	elif ((x-x2)**2 + (y-y2)**2):
+	elif ((x-x2)**2 + (y-y2)**2 <= r2**2):
 		in2 = in2 + 1
 
 inNo = num - in1 - in2 - inBoth
