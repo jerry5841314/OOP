@@ -7,7 +7,7 @@ def read(filename):
 
 def run(ifn):
     #c = 'python3 -B AC_Code.py'
-    c = 'python -B AC_Code.py'
+    c = 'python3 -B AC_Code.py'
     #c = '1189.exe'
     return os.system("%s < %s > %s"%(c,ifn,'slave.out'))
 
@@ -22,7 +22,7 @@ def main():
             if res != 0:
                 ResStr = 'RE 0'
             else:
-                waLine = os.system('python ./special %s %s slave.out' % (ifn, ofn))
+                waLine = os.system('python3 ./special %s %s slave.out' % (ifn, ofn))
                 if waLine != 0:
                     ResStr = "WA 0" 
                 else:
