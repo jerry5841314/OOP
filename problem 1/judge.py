@@ -6,8 +6,8 @@ def read(filename):
     with open(filename, 'rb') as fp: return fp.read()
 
 def run(ifn):
-    #c = 'python3 -B AC_Code.py'
-    c = 'python -B AC_Code.py'
+    c = 'python3 -B AC_Code.py'
+    #c = 'python -B AC_Code.py'
     #c = '1189.exe'
     return os.system("%s < %s > %s"%(c,ifn,'slave.out'))
 
