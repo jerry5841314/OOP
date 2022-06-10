@@ -173,7 +173,10 @@ class ppl(pygame.sprite.Sprite):
 			self.rect.top = WINDOW_HEIGHT
 
 if __name__ == '__main__':
-	count = int(sys.argv[1])
+	if len(sys.argv) == 2:
+		count = int(sys.argv[1])
+	else:
+		count = 1
 	score = 0
 	while count:
 		score = main(score)
