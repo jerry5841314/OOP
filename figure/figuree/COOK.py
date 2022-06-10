@@ -1,7 +1,5 @@
 import re
-from tkinter import PIESLICE
 import pygame, sys, random, time
-from pygame.locals import USEREVENT
 
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
