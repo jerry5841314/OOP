@@ -1,0 +1,54 @@
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+
+\section{Advantage of Design}
+\begin{enumerate}
+\item \textbf{Open-Closed Principle} \\
+We achieve OCP in \textbf{Ingredient}, \textbf{Recipe}, \textbf{Factory}, \textbf{StaticItem}, \textbf{World}.
+    One can add any ingredients by extending the \textbf{Ingredient} class as
+\lstinputlisting[language=Java]{1.java}
+
+One can creates any recipe by extending the abstract \textbf{ConcreteRecipe} class
+\lstinputlisting[language=Java]{2.java}
+
+One can creates any ingredient factory by extending the abstract \textbf{Factory} class
+\lstinputlisting[language=Java]{3.java}
+
+One can creates any static item by extending the abstract \textbf{StaticItem} class public class
+\lstinputlisting[language=Java]{4.java}
+
+Finally, one can also creates a customized map and world by extending the abstract \textbf{World} class.
+\item Not many outer source code and packages are utilized, make our codes rather "lightweight".
+\end{enumerate}
+
+\section{Disadvantage of Design}
+\subsection{File IO}
+Beacuse we use java.IO.File to access our assets, it is nearly impoosible to package the whole game as a file.
+A proper way to load image from .jar file is to use getClassLoader().getResourceAsStream(). However, since the utility is design to load state by
+all file name, it is not likely possible to do so.
+\subsection{Design limit}
+We us java AWT as our GUI engine, and because it is quite old package, some of our design is limited by its ability.
+
+\section{Packages Utilization}
+No outer source package other than java AWT is imported in this project. But we can have to attribute and thank TA Waterball for providing the template code for 2D game design in package \textbf{Java-Game-Programming-with-FSM-and-MVC}, especially for the design of \textbf{FiniteStateMachine} packge \textbf{fsm}, and all parts related to image rendering.\\
+All picture and icons designs are download from free database \textbf{flaticon}, with attribution to creator \textbf{Freepik}.

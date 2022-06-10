@@ -1,0 +1,7 @@
+\section{Disadvantage of Design}
+\subsection{File IO}
+Beacuse we use java.IO.File to access our assets, it is nearly impoosible to package the whole game as a file.
+A proper way to load image from .jar file is to use getClassLoader().getResourceAsStream(). However, since the utility is design to load state by
+all file name, it is not likely possible to do so.
+\subsection{Design limit}
+We us java AWT as our GUI engine, and because it is quite old package, some of our design is limited by its ability.
